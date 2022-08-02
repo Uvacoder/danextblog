@@ -37,10 +37,10 @@ export const Hero = () => {
     <>
       {error && <Alert type="error" message={error} onClose={clearError} />}
       <section>
-        <div className="container grid grid-cols-2 items-center mt-20">
+        <div className="container md:grid md:grid-cols-2 md:items-center mt-20">
           <div>
             <Title name="The No-BS Blog" />
-            <p className="pt-4 max-w-lg text-sm text-gray-500 dark:text-gray-400">
+            <p className="pt-4 max-w-lg text-sm leading-relaxed md:text-[15px] text-gray-500 dark:text-gray-400">
               Practical tutorials along with working code samples and
               boilerplate projects for real-world web development problems. The
               tutorials are concise as possible, focusing on the code, structure
@@ -66,7 +66,7 @@ export const Hero = () => {
             </form>
           </div>
 
-          <figure>
+          <figure className="hidden md:block">
             <Image
               src={heroBg}
               alt="Woman sitting in front of computer in office"
