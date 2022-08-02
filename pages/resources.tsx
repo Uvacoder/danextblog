@@ -1,9 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 // import { Title } from '../components/Title'
-import Links from 'icons/Links'
-import screenshot from 'public/assets/freecamp.png'
 import { Resource } from 'components/Resource'
 import { onlineCourses } from 'data/data'
 
@@ -17,7 +14,7 @@ const Resources: NextPage = () => {
         <div className="container mt-28">
           <Resource title="Online Courses" data={onlineCourses} />
 
-          <section className="relative mt-24">
+          {/* <section className="relative mt-24">
             <h3 className="outline-text text-5xl capitalize font-black absolute -top-10 -z-10">
               Interactive Tutorials
             </h3>
@@ -58,7 +55,7 @@ const Resources: NextPage = () => {
                 </div>
               </li>
             </ul>
-          </section>
+          </section> */}
         </div>
       </section>
     </>

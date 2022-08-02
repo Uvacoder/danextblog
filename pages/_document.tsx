@@ -32,7 +32,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body className="font-barlow">
+        <body className="font-barlow dark:bg-[#070707]">
           <Main />
           <NextScript />
         </body>
