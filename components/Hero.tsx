@@ -1,9 +1,9 @@
 import { FormEvent, useState } from 'react'
 
-import { Alert, InputField, Title } from './'
-import { useFormFields } from '../hooks/form-hook'
 import Image from 'next/image'
+import { useFormFields } from '../hooks/form-hook'
 import heroBg from '../public/assets/hero-bg.jpg'
+import { Alert, Title } from './'
 
 interface QueryProps {
   query: string
@@ -37,10 +37,10 @@ export const Hero = () => {
     <>
       {error && <Alert type="error" message={error} onClose={clearError} />}
       <section>
-        <div className="container grid grid-cols-2 items-center mt-12">
+        <div className="container grid grid-cols-2 items-center mt-20">
           <div>
             <Title name="The No-BS Blog" />
-            <p className="pt-4 max-w-lg text-sm text-gray-500">
+            <p className="pt-4 max-w-lg text-sm text-gray-500 dark:text-gray-400">
               Practical tutorials along with working code samples and
               boilerplate projects for real-world web development problems. The
               tutorials are concise as possible, focusing on the code, structure
@@ -60,7 +60,7 @@ export const Hero = () => {
                 name="search"
                 className="px-4 py-3 w-full flex-1 rounded-md drop-shadow-2xl mr-24 focus:outline-none  focus:ring-gray-500 focus:ring focus:outline-2 focus:outline-offset-4"
               />
-              <button className="bg-black text-white py-2 px-6 rounded-md absolute right-0 mr-4 hover:bg-gray-900">
+              <button className="bg-black text-white py-2 px-6 rounded-md absolute right-0 mr-4 hover:bg-gray-900 dark:bg-zinc-700 dark:hover:bg-zinc-800">
                 Search
               </button>
             </form>
@@ -72,7 +72,7 @@ export const Hero = () => {
               alt="Woman sitting in front of computer in office"
               className="rounded-md"
             />
-            <figcaption className="text-slate-600 text-sm">
+            <figcaption className="text-slate-600 text-sm dark:text-gray-400">
               Photo by ThisIsEngineering
             </figcaption>
           </figure>

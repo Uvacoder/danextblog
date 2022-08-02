@@ -1,16 +1,12 @@
 import Link from 'next/link'
-import { useState } from 'react'
 import { useRouter } from 'next/router'
+import { useState } from 'react'
 
-import { Sun, Moon } from '../icons'
+import { Moon, Sun } from '../icons'
 
 export const Header = () => {
   const router = useRouter()
   const [lightMode, setLightMode] = useState<boolean>(true)
-
-  const toggleThemeMode = () => {
-    setLightMode(prevState => !prevState)
-  }
 
   const links = [
     { id: 1, name: 'blog', route: '/' },
@@ -21,7 +17,7 @@ export const Header = () => {
   return (
     <header className="grid place-items-center mt-9">
       <div className="container fixed z-10">
-        <nav className="flex items-center justify-between bg-black text-slate-100 px-6 py-4 rounded-lg">
+        <nav className="flex items-center justify-between bg-black text-slate-100 px-6 py-4 rounded-lg dark:bg-zinc-900">
           <Link href="/">
             <a className="font-black">DaNextBlog</a>
           </Link>
@@ -42,17 +38,19 @@ export const Header = () => {
             ))}
             <li>
               {lightMode ? (
-                <div
+                <button
+                  type="button"
                   className="w-6 h-6 flex items-center cursor-pointer"
-                  onClick={toggleThemeMode}>
+                  onClick={() => setLightMode(!lightMode)}>
                   <Sun />
-                </div>
+                </button>
               ) : (
-                <div
+                <button
+                  type="button"
                   className="w-6 h-6 flex items-center cursor-pointer"
-                  onClick={toggleThemeMode}>
+                  onClick={() => setLightMode(!lightMode)}>
                   <Moon />
-                </div>
+                </button>
               )}
             </li>
           </ul>
